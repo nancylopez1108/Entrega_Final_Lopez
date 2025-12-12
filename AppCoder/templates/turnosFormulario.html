@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Turno</title>
+</head>
+<body>
+
+   <h1>Formulario de Turno</h1>
+
+<form action="/turnosFormulario/" method="POST">
+    {% csrf_token %}
+    {{ miFormulario.as_p }}
+    <input type="submit" value="Guardar turno">
+</form>
+
+</body>
+</html>
+
+    

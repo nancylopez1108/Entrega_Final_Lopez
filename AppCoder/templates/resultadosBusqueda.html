@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+</head>
+<body>
+
+<h2>Resultados para DNI {{ dni }}</h2>
+
+{% if turnos %}
+    <ul>
+        {% for turno in turnos %}
+            <li>
+                {{ turno.nombre }} |
+                {{ turno.fecha }} |
+                {{ turno.hora }} |
+                {{ turno.especialidad }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No se encontraron turnos para ese DNI.</p>
+{% endif %}
+
+</body>
+</html>
+
